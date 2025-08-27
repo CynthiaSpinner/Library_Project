@@ -1,50 +1,64 @@
-# Library Project
+# My Library
 
-## Getting Started
+A modern, responsive web application for managing your personal book collection. Built with vanilla JavaScript, HTML5, and CSS3.
 
-1. Open your command line and navigate to your `repos` directory (if you do not have a `repos` folder, then you can use `mkdir repos` to create one)
-2. Use this template repository to start a new project in your repos folder: `git clone <repo_name>`
-3. cd `repo_name` to navigate into your new repo directory
-4. Start Visual Studio Code and select 'Open Folder'. Then select `repo_name` to open the folder in the editor (or just type `code .` in your terminal inside the repo directory)
-5. Follow the instructions on the README.md file to complete exercises
-6. Open the index.html file to get started
+## Features
 
-## Instructions
+### Core Functionality
+- **Add Books**: Add new books to your library with title, author, and read status
+- **Remove Books**: Delete books from your collection with individual remove buttons
+- **Mark as Read**: Track which books you've completed reading
+- **Dynamic Display**: Real-time updates to your book table without page refreshes
 
-- In your index.html
+### User Interface
+- **Clean, Modern Design**: Professional styling with a card-based layout
+- **Responsive Layout**: Optimized for all screen sizes from mobile phones to 4K displays
+- **Centered Form Elements**: Intuitive form layout with properly aligned inputs
+- **Interactive Elements**: Hover effects and smooth transitions throughout
+- **Professional Color Scheme**: Carefully chosen colors for optimal readability
 
-1. Add a label and input box for the title
-2. Add a label and input box for the author
-3. Add a label and checkbox for the read property
-4. Add a submit button to add a new book
+### Technical Features
+- **Object-Oriented Design**: Built using ES6 classes for Book and Library management
+- **DOM Manipulation**: Dynamic content creation and removal without framework dependencies
+- **Event-Driven Architecture**: Responsive user interactions with proper event handling
+- **Data Persistence**: In-memory storage with proper book tracking and ID management
+- **Cross-Browser Compatibility**: Works across all modern web browsers
 
-- In your app.js
+## How to Use
 
-1. Create a class `Book` that has the following properties:
-   - Title (string)
-   - Author (string)
-   - Read (boolean)
-2. Create a class `Library` that has the following properties and methods:
-   - Book count (number)
-   - Books (array of books)
-   - `markRead` method that will:
-     - Take in a parameter `checkbox` and `id`
-     - Loop through the library books
-     - If the book id is the same as the param id, change the book read property to true, the `checkbox` checked attribute to true, and the `checked` disabled attribute to true
-   - `addBook` method that will:
-     - Select the title input value, author input value, and read checkbox value
-     - Use the book constructor to create a new book, passing in the input value, author value, and read checkbox value as params
-     - Create a new table row
-     - Create new table cells `title`, `author` and `read` properties of the newly added book
-     - Append the new table cells to the newly created row
-     - Select the table body
-     - Append the new row to the table body
-     - Increment library `bookCount` by one
-3. Select the `Add Book` button from your index.html
-4. Add an event listener to the button element that listens for a `click` event, and calls the library `addBook`
+1. **Adding a Book**:
+   - Fill in the Title and Author fields
+   - Check the "Read" box if you've already read the book
+   - Click "Add Book" to add it to your library
 
-## BONUS
+2. **Removing a Book**:
+   - Click the "Remove" button next to any book in your collection
+   - The book will be instantly removed from your library
 
-- Add a method to the `Library` class that removes a book from the `books` array
-- Update your UI on the index.html page to have a `Remove` button per book item, with an event listener for 'click' events to call the `removeBook` Library method
-- Hint: Use the book `id` property to find, then remove the book
+3. **Tracking Reading Status**:
+   - Books display a checkbox indicating whether they've been read
+   - Read status is preserved when adding new books
+
+## Technical Implementation
+
+### Architecture
+- **Book Class**: Manages individual book properties (ID, title, author, read status)
+- **Library Class**: Handles the collection of books and all library operations
+- **Responsive CSS**: Multiple breakpoints ensuring optimal display on any device
+- **Modern JavaScript**: ES6+ features including classes, arrow functions, and template literals
+
+### Responsive Design Breakpoints
+- **Mobile (≤480px)**: Optimized for small screens with stacked layout
+- **Tablet (481px-768px)**: Balanced layout for touch interfaces
+- **Desktop (769px-1440px)**: Full-featured layout with centered elements
+- **Large Displays (1441px+)**: Enhanced spacing and typography for large screens
+
+## Files Structure
+- `index.html` - Main application interface
+- `app.js` - Core application logic and classes
+- `styles.css` - Complete responsive styling
+- `README.md` - This documentation
+
+## Future
+- Demo only
+- Future enhancements could include local storage or database integration
